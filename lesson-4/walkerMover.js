@@ -5,18 +5,18 @@ let mover = {
      */
     getDirection() {
         // Доступные значения ввода.
-        const availableDirections = [2, 4, 6, 8];
+        const availableDirections = [1, 2, 3, 4, 6, 7, 8, 9];
 
         while (true) {
             // Получаем от пользователя направление.
-            let direction = parseInt(prompt('Введите число (2, 4, 6 или 8), куда вы хотите переместиться, "Отмена" для выхода.'));
+            let direction = parseInt(prompt('Введите число (1, 2, 3, 4, 6, 7, 8 или 9), куда вы хотите переместиться, "Отмена" для выхода.'));
             if (isNaN(direction)) {
                 return null;
             }
             // Если направление не одно из доступных, то сообщаем что надо ввести корректные данные
             // и начинаем новую итерацию.
             if (!availableDirections.includes(direction)) {
-                alert('Для перемещения необходимо ввести одно из чисел 2, 4, 6 или 8.');
+                alert('Для перемещения необходимо ввести одно из чисел 1, 2, 3, 4, 6, 7, 8 или 9.');
                 continue;
             }
 
@@ -40,15 +40,59 @@ let mover = {
         switch (direction) {
             case 2:
                 nextPosition.y++;
+                if (nextPosition.y == 10) {
+                    nextPosition.y--;
+                }
                 break;
             case 4:
                 nextPosition.x--;
+                if (nextPosition.x == -1) {
+                    nextPosition.x++;
+                }
                 break;
             case 6:
                 nextPosition.x++;
+                if (nextPosition.x == 10) {
+                    nextPosition.x--;
+                }
                 break;
             case 8:
                 nextPosition.y--;
+                if (nextPosition.y == -1) {
+                    nextPosition.y++;
+                }
+                break;
+            case 1:
+                nextPosition.y++;
+                nextPosition.x--;
+                if (nextPosition.y == 10 || nextPosition.x == -1) {
+                    nextPosition.y--;
+                    nextPosition.x++;
+                }
+                break;
+            case 3:
+                nextPosition.x++;
+                nextPosition.y++;
+                if (nextPosition.y == -1 || nextPosition.x == 10) {
+                    nextPosition.y--;
+                    nextPosition.x--;
+                }
+                break;
+            case 7:
+                nextPosition.y--;
+                nextPosition.x--;
+                if (nextPosition.y == -1 || nextPosition.x == -1) {
+                    nextPosition.y++;
+                    nextPosition.x++;
+                }
+                break;
+            case 9:
+                nextPosition.y--;
+                nextPosition.x++;
+                if (nextPosition.y == -1 || nextPosition.x == 10) {
+                    nextPosition.y++;
+                    nextPosition.x--;
+                }
                 break;
         }
 
