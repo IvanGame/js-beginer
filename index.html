@@ -5,11 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lesson-1</title>
+    <title>Main</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e15102c941.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <div class="header__logo">
+                        <a href="index.html" class="header__logo-img">
+                            <img src="img/Geekbrains_logo.svg" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="header__name">
+                        <p>Архив домашнего задания</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <section class="content__greetings greetings">
+                <div class="greetings__row">
+                    <div class="greetings__title">
+                        <h1>Добро пожаловать!</h1>
+                    </div>
+                    <div class="greetings__text">
+                        <p>Эта страница посвящена моему домашнему заданию в GeekBrains</p>
+                    </div>
+                </div>
+                <video preload="auto" autoplay muted loop class="greetings__video">
+                    <source type="video/mp4" src="video/forest.mp4">
+                </video>
+            </section>
+            <section class="content__lessons-box lesson-box">
+                <div class="container">
+                    <div class="lesson-box__title">
+                        <h2>Базовый курс по JavaScript</h2>
+                    </div>
+                    <div class="lesson-box__items">
+                        <a href="lesson-1.html" class="lesson-box__card">
+                            <div class="lesson-box__item">
+                                <h3 class="lesson-box__text">
+                                    Урок 1
+                                </h3>
+                                <p class="lesson-box__article">Основы языка JavaScript</p>
+                                <p class="lesson-box__link">Перейти к ДЗ</p>
+                            </div>
+                        </a>
+                        <a href="lesson-2.html" class="lesson-box__card">
+                            <div class="lesson-box__item">
+                                <h3 class="lesson-box__text">
+                                    Урок 2
+                                </h3>
+                                <p class="lesson-box__article">Основные операторы JavaScript</p>
+                                <p class="lesson-box__link">Перейти к ДЗ</p>
+                            </div>
+                        </a>
+                        <a href="lesson-3.html" class="lesson-box__card">
+                            <div class="lesson-box__item">
+                                <h3 class="lesson-box__text">
+                                    Урок 3
+                                </h3>
+                                <p class="lesson-box__article">Циклы, массивы, структуры данных</p>
+                                <p class="lesson-box__link">Перейти к ДЗ</p>
+                            </div>
+                        </a>
+                        <a href="lesson-4.html" class="lesson-box__card">
+                            <div class="lesson-box__item">
+                                <h3 class="lesson-box__text">
+                                    Урок 4
+                                </h3>
+                                <p class="lesson-box__article">Объекты в JavaScript </p>
+                                <p class="lesson-box__link">Перейти к ДЗ</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__rights">
+                        &copy; 2022 Иван Логинов
+                    </div>
+                    <div class="footer__social">
+                        <a href="https://vk.com/logo_pass" target="_blank" class="footer__link"><i
+                                class="fa-brands fa-vk"></i></a>
+                        <a href="https://t.me/LogoPass" target="_blank" class="footer__link"><i
+                                class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/logo_pass/" target="_blank" class="footer__link"><i
+                                class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
